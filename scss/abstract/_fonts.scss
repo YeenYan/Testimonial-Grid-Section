@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+// Weights: 500, 600
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: .8rem;
+    line-height: 1.4;
+}
+
+.col__profile {
+
+    &-name {
+        font-size: clamp(.9rem, calc(.1rem + 1vw), 1rem);
+    }
+
+    &-type {
+        font-size: clamp(.8rem, calc(1vw + .1rem), .9rem);
+    }
+
+}
+
+.col {
+
+    &__main-text {
+        font-size: clamp(1.2rem, calc(1vw + 1rem), 1.3rem);
+        font-weight: 600;
+        line-height: 1.1;
+    }
+
+    &__sub-text {
+        font-size: .9rem;
+    }
+
+}
+
+.attribution {
+    text-align: center;
+
+    &__mentor ,
+    &__myname {
+        text-decoration: none;
+    }
+}
