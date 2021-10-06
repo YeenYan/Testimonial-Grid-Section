@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.col__profile-name {
+  font-size: clamp(0.9rem, 0.1rem + 1vw, 1rem);
+}
+.col__profile-type {
+  font-size: clamp(0.8rem, 1vw + 0.1rem, 0.9rem);
+}
+
+.col__main-text {
+  font-size: clamp(1.2rem, 1vw + 1rem, 1.3rem);
+  font-weight: 600;
+  line-height: 1.1;
+}
+.col__sub-text {
+  font-size: 0.9rem;
+}
+
+.attribution {
+  text-align: center;
+}
+.attribution__mentor, .attribution__myname {
+  text-decoration: none;
+}
+
+/*
+1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+*/
+body {
+  background-color: #ecf2f8;
+}
+
+.first__col {
+  background-color: #7541c8;
+}
+
+.second__col {
+  background-color: #48556a;
+}
+
+.third__col,
+.fifth__col {
+  color: #48556a;
+  background-color: white;
+}
+.third__col .col__profile-name,
+.third__col .col__profile-type,
+.fifth__col .col__profile-name,
+.fifth__col .col__profile-type {
+  color: rgba(72, 85, 106, 0.8);
+}
+.third__col .col__sub-text,
+.fifth__col .col__sub-text {
+  color: rgba(72, 85, 106, 0.7);
+}
+
+.fourth__col {
+  background-color: #19212e;
+}
+
+.first__col,
+.second__col,
+.fourth__col {
+  color: white;
+}
+.first__col .col__profile-type,
+.second__col .col__profile-type,
+.fourth__col .col__profile-type {
+  color: rgba(255, 255, 255, 0.5);
+}
+.first__col .col__sub-text,
+.second__col .col__sub-text,
+.fourth__col .col__sub-text {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.attribution {
+  color: #19212e;
+}
+.attribution__mentor, .attribution__myname {
+  color: #19212e;
+}
+
+/*- Mobile: 375px
+- Desktop: 1440px */
+img {
+  max-width: 100%;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.section {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.col {
+  padding: 2rem 2.47rem;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+  margin: 2em 0;
+}
+
+.col__profile {
+  display: flex;
+}
+.col__profile-image {
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  width: 35px;
+  height: 35px;
+}
+
+.col__quotation-image {
+  position: absolute;
+  top: 0;
+  right: calc(100% - 19rem);
+  z-index: -1;
+  opacity: 0.8;
+}
+.col__profile-details {
+  margin-left: 1em;
+}
+.col__main-text {
+  margin: 1em 0;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 15px;
+}
+
+@media (min-width: 600px) {
+  .section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .col {
+    min-width: 300px;
+    flex: 1;
+    flex-basis: 30%;
+    margin: 1rem;
+  }
+
+  @supports (gap: 20px) {
+    .section {
+      gap: 20px;
+    }
+
+    .col {
+      margin: 0;
+    }
+  }
+}
+@media (min-width: 1440px) {
+  .main {
+    height: 100vh;
+  }
+
+  .section {
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "first-col first-col second-col fifth-col" "third-col fourth-col fourth-col fifth-col";
+  }
+
+  .col {
+    margin: 1rem;
+  }
+
+  .first__col {
+    grid-area: first-col;
+  }
+
+  .second__col {
+    grid-area: second-col;
+  }
+
+  .third__col {
+    grid-area: third-col;
+  }
+
+  .fourth__col {
+    grid-area: fourth-col;
+  }
+
+  .fifth__col {
+    grid-area: fifth-col;
+  }
+
+  .col__quotation-image {
+    right: 6rem;
+  }
+
+  @supports (gap: 20px) {
+    .section {
+      gap: 20px;
+    }
+
+    .col {
+      margin: 0;
+    }
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=styles.css.map */
