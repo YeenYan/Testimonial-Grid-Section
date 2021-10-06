@@ -1,0 +1,63 @@
+@use '../abstract/' as a;
+
+/*- Mobile: 375px
+- Desktop: 1440px */
+
+img {
+    max-width: 100%;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.section {
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.col {
+    padding: 2rem 2.47rem;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,.5));
+    margin: 2em 0;
+}
+
+.col__profile {
+    display: flex;
+
+    &-image {
+        border-radius: 50%;
+        border: 2px solid hsla(0, 0%, 100%,.5);
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.col {
+
+    &__quotation-image {
+        position: absolute;
+        top: 0;
+        right: calc(100% - 19rem);
+        z-index: -1;
+        opacity: .8;
+    }
+
+    &__profile-details {
+        margin-left: 1em;
+    }
+
+    &__main-text {
+        margin: 1em 0;
+    }
+
+}
+
+.attribution {
+    position: absolute;
+    bottom: 15px;
+}
